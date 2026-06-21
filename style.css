@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER & NAV */
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-color: #fff;
+    background: rgba(255,255,255,0.1);
+}
+
+/* MAIN STRUCTURE */
+main {
+    display: flex;
+    flex: 1;
+    padding: 40px 10%; /* Lebih rapi dengan margin persentase */
+    gap: 30px;
+}
+
+#content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* NOVEL CARD STYLE */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek melayang saat hover */
+}
+
+.featured-image {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.article-text {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author {
+    color: #777;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.btn-read {
+    align-self: flex-start;
+    padding: 10px 20px;
+    background-color: #2d3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* ASIDE STYLE */
+aside {
+    flex: 1;
+    align-self: flex-start;
+}
+
+.profile-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.profile-aside {
+    width: 100%;
+    max-width: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #f4f7f6;
+}
+
+/* MEDIA QUERY (Wajib untuk nilai tinggi) */
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .card {
+        flex-direction: column;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+footer {
+    background-color: #2d3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
